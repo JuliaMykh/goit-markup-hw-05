@@ -18,6 +18,7 @@
   --portfolio-cards-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   --icon-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: var(--main-white-color);
@@ -157,6 +158,24 @@ p {
 }
 .link.current {
   color: var(--main-blue-color);
+
+  position: relative;
+}
+.link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: var(--main-blue-color);
+
+  transition: width 250ms var(--timing-function);
+}
+.link.current:hover::after {
+  width: 100%;
 }
 
 /* Герой */
@@ -248,6 +267,30 @@ p {
 }
 .job-list .item:not(:last-child) {
   margin-right: 30px;
+}
+.job-image {
+  display: block;
+}
+.job-list-overlay {
+  color: var(--main-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.job-overlay-container {
+  position: absolute;
+  width: 370px;
+  bottom: 0;
+  left: 0;
+}
+.job-item-container {
+  position: relative;
 }
 /* Наша команда */
 .section-title.team {
@@ -494,4 +537,29 @@ p {
   border-bottom: 1px solid var(--border-color-card);
   border-left: 1px solid var(--border-color-card);
   border-right: 1px solid var(--border-color-card);
+}
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--main-white-color);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
