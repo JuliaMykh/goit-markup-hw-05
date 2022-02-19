@@ -1,4 +1,4 @@
-/* Главная страница */
+/*====== Главная страница =======*/
 
 :root {
   --header-color: #212121;
@@ -62,7 +62,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-/* Хедер */
+/*==== Хедер =====*/
 .header {
   background-color: var(--main-white-color);
   border-bottom: 1px solid var(--border-color);
@@ -179,7 +179,7 @@ p {
   width: 100%;
 }
 
-/* Герой */
+/*==== Герой ====*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -221,7 +221,7 @@ p {
   background-size: cover;
   background-position: center;
 }
-/* Наши приемущества */
+/*==== Наши приемущества ====*/
 
 .h2-title-benefits {
   display: none;
@@ -256,7 +256,7 @@ p {
   justify-content: center;
 }
 
-/* Чем мы занимаемcя */
+/*==== Чем мы занимаемcя ====*/
 .section-title.job {
   margin-bottom: 50px;
 }
@@ -293,7 +293,7 @@ p {
 .job-item-container {
   position: relative;
 }
-/* Наша команда */
+/*==== Наша команда ====*/
 .section-title.team {
   margin-bottom: 50px;
 }
@@ -358,7 +358,7 @@ p {
   background-color: var(--main-blue-color);
 }
 
-/* Постоянные клиенты */
+/*==== Постоянные клиенты ====*/
 .clients {
   background-color: var(--main-white-color);
 }
@@ -389,7 +389,7 @@ p {
   border: 1px solid var(--main-blue-color);
   color: var(--main-blue-color);
 }
-/* Футер */
+/*==== Футер ==== */
 .main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -463,9 +463,9 @@ p {
 .social-network-list .link:focus {
   background-color: var(--main-blue-color);
 }
-/* Страница Портфолио */
+/*==== Страница Портфолио ==== */
 
-/* Фильтры */
+/*==== Фильтры ==== */
 .buttons-port {
   display: block;
   display: flex;
@@ -496,7 +496,7 @@ p {
   background-color: var(--main-blue-color);
   box-shadow: var(--button-portfolio-shadow);
 }
-/* Портфолио */
+/*==== Портфолио ====*/
 .h1-header-portfolio {
   display: none;
 }
@@ -550,7 +550,6 @@ p {
   opacity: 1;
   top: 0;
   left: 0;
-
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 
@@ -575,11 +574,14 @@ p {
   padding: 63px 24px;
 }
 
-/* Модальное окно */
+/*==== Модальное окно ====*/
 .backdrop {
   position: fixed;
   top: 0;
   right: 0;
+
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
 
   width: 100%;
   height: 100%;
@@ -589,17 +591,22 @@ p {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
   position: relative;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
   background-color: var(--main-white-color);
 }
+
 .button-modal {
   position: absolute;
   top: 0;
