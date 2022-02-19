@@ -19,6 +19,7 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
   --icon-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --product-card-overlay: rgba(33, 150, 243, 0.9);
 }
 body {
   background-color: var(--main-white-color);
@@ -543,7 +544,40 @@ p {
   position: relative;
   overflow: hidden;
 }
-.container-overlay-portfolio::before {
+
+.product-overlay {
+  position: absolute;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 250ms var(--timing-function);
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--product-card-overlay);
+}
+.content-overlay-portfolio {
+  color: var(--main-white-color);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+
+  /* transform: translateY(100%);
+  transition: transform 250ms var(--timing-function); */
+}
+.tehnocrak:hover .product-overlay,
+.tehnocrak:focus .product-overlay {
+  transform: translateY(-100%);
+}
+.container-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 1; */
+
+  padding: 63px 24px;
+}
+
+/* .container-overlay-portfolio::before {
   display: inline-block;
   content: '';
   position: absolute;
@@ -554,39 +588,15 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-}
-
-/* .product-overlay {
-  position: absolute;
-  opacity: 1;
-  transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
 } */
-.tehnocrak:hover .container-overlay-portfolio::before,
-.tehnocrak:hover .content-overlay-portfolio {
+
+/* .tehnocrak:hover .container-overlay-portfolio::before,
+.tehnocrak:focus .container-overlay-portfolio::before,
+.tehnocrak:hover .content-overlay-portfolio,
+.tehnocrak:focus .content-overlay-portfolio {
   transform: translateY(0);
-}
-.content-overlay-portfolio {
-  color: var(--main-white-color);
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-
-  transform: translateY(140%);
-  transition: transform 250ms var(--timing-function);
-}
-.container-content-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-
-  padding: 63px 24px;
-}
+  opacity: ;
+} */
 
 /* Модальное окно */
 .backdrop {
