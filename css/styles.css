@@ -548,7 +548,10 @@ p {
 .product-overlay {
   position: absolute;
   opacity: 1;
-  transform: translateY(0%);
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 
   width: 100%;
@@ -560,43 +563,17 @@ p {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-
-  /* transform: translateY(100%);
-  transition: transform 250ms var(--timing-function); */
 }
 .tehnocrak:hover .product-overlay,
 .tehnocrak:focus .product-overlay {
-  transform: translateY(-100%);
+  transform: translateY(0%);
 }
 .container-content-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  /* opacity: 1; */
-
   padding: 63px 24px;
 }
-
-/* .container-overlay-portfolio::before {
-  display: inline-block;
-  content: '';
-  position: absolute;
-  opacity: 1;
-  transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-} */
-
-/* .tehnocrak:hover .container-overlay-portfolio::before,
-.tehnocrak:focus .container-overlay-portfolio::before,
-.tehnocrak:hover .content-overlay-portfolio,
-.tehnocrak:focus .content-overlay-portfolio {
-  transform: translateY(0);
-  opacity: ;
-} */
 
 /* Модальное окно */
 .backdrop {
