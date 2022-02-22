@@ -1,4 +1,4 @@
-/*====== Главная страница =======*/
+/*=============== Главная страница ==============*/
 
 :root {
   --header-color: #212121;
@@ -62,7 +62,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-/*==== Хедер =====*/
+/*========= Хедер =========*/
 .header {
   background-color: var(--main-white-color);
   border-bottom: 1px solid var(--border-color);
@@ -129,6 +129,8 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .contacts .link {
   color: var(--text-color);
@@ -137,14 +139,18 @@ p {
 .icon-envelope {
   margin-right: 10px;
   fill: currentColor;
+
+  transition: color 250ms var(--timing-function);
 }
 .icon-envelope:hover,
 .icon-envelope:focus {
-  fill: var(--main-blue-color);
+  color: var(--main-blue-color);
 }
 .icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .contacts .link:hover,
@@ -177,7 +183,7 @@ p {
   width: 100%;
 }
 
-/*==== Герой ====*/
+/*======== Герой =======*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -219,7 +225,7 @@ p {
   background-size: cover;
   background-position: center;
 }
-/*==== Наши приемущества ====*/
+/*======== Наши приемущества ========*/
 
 .h2-title-benefits {
   display: none;
@@ -254,7 +260,7 @@ p {
   justify-content: center;
 }
 
-/*==== Чем мы занимаемcя ====*/
+/*======== Чем мы занимаемcя =======*/
 .section-title.job {
   margin-bottom: 50px;
 }
@@ -291,7 +297,7 @@ p {
 .job-item-container {
   position: relative;
 }
-/*==== Наша команда ====*/
+/*========= Наша команда =========*/
 .section-title.team {
   margin-bottom: 50px;
 }
@@ -348,6 +354,8 @@ p {
   cursor: pointer;
   display: block;
   display: flex;
+
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .icon {
   fill: currentColor;
@@ -359,7 +367,7 @@ p {
   background-color: var(--main-blue-color);
 }
 
-/*==== Постоянные клиенты ====*/
+/*======== Постоянные клиенты =======*/
 .clients {
   background-color: var(--main-white-color);
 }
@@ -380,6 +388,8 @@ p {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   cursor: pointer;
+
+  transition: border 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .icon-clients {
   fill: currentColor;
@@ -390,7 +400,7 @@ p {
   border: 1px solid var(--main-blue-color);
   color: var(--main-blue-color);
 }
-/*==== Футер ==== */
+/*========= Футер ========= */
 .main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -403,6 +413,8 @@ p {
   color: var(--main-white-color);
   font-size: 14px;
   line-height: 1.7;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .address {
   margin-top: 20px;
@@ -413,6 +425,8 @@ p {
   color: var(--footer-mail-tel-color);
   font-size: 14px;
   line-height: 1.7;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .link.first {
   display: inline-block;
@@ -459,14 +473,16 @@ p {
   cursor: pointer;
   display: block;
   display: flex;
+
+  transition: background-color 250ms var(--timing-function);
 }
 .social-network-list .link:hover,
 .social-network-list .link:focus {
   background-color: var(--main-blue-color);
 }
-/*==== Страница Портфолио ==== */
+/*=============== Страница Портфолио ================ */
 
-/*==== Фильтры ==== */
+/*======== Фильтры ====== */
 .buttons-port {
   display: block;
   display: flex;
@@ -497,7 +513,7 @@ p {
   background-color: var(--main-blue-color);
   box-shadow: var(--button-portfolio-shadow);
 }
-/*==== Портфолио ====*/
+/*========== Портфолио ==========*/
 .h1-header-portfolio {
   display: none;
 }
@@ -578,7 +594,7 @@ p {
   padding: 63px 24px;
 }
 
-/*==== Модальное окно ====*/
+/*================= Модальное окно ===================*/
 .backdrop {
   position: fixed;
   top: 0;
